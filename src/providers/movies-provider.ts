@@ -16,8 +16,17 @@ export class MoviesProvider {
     });
   }  
 
+  public getMovie(id: string) {
+    return new Promise( resolve => {
+    let url= 'https://www.omdbapi.com/?i=' + id;
+
+    this.http.get(url)
+        .map(result => result.json())
+        .subscribe(data => resolve(data))
+    });
+  }
+
   constructor(public http: Http) {
-    console.log('Hello MoviesProvider Provider');
   }
 
 }

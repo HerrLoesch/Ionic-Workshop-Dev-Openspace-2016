@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { IonicApp, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { DetailsPage } from '../pages/details-page/details-page';
 import { SearchPage } from '../pages/search-page/search-page';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
+    DetailsPage,
     SearchPage
   ],
   imports: [
@@ -16,7 +16,7 @@ import { SearchPage } from '../pages/search-page/search-page';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
+    DetailsPage,
     SearchPage
   ],
   providers: []

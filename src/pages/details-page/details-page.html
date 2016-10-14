@@ -1,0 +1,34 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+    {{movie.Title}}
+    </ion-card-header>
+
+    <img src="{{movie.Poster}}" />
+    <ion-card-content>
+      {{movie.Plot}}
+    </ion-card-content>
+    <ion-row>
+      <ion-col>
+        <ion-badge>
+        <ion-icon name="star-half"> {{movie.imdbRating}}</ion-icon>
+        </ion-badge>
+      </ion-col>
+
+      <ion-col>
+        <ion-badge>
+        <ion-icon name="text"> {{movie.imdbVotes}}</ion-icon>
+        </ion-badge>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>
