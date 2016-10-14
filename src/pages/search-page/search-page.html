@@ -1,0 +1,16 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Search</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+      <ion-item *ngFor="let movie of movies">
+          {{movie.Title}}
+      </ion-item>
+    </ion-list>
+</ion-content>
