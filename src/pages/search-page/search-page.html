@@ -11,7 +11,7 @@
     <ion-searchbar 
     [(ngModel)]="searchText" 
     (ionInput)="onSearchInput()"
-    >
+    debounce="1000">
     </ion-searchbar>
     
     <ion-list>      
