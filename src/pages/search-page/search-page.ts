@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ModalController } from 'ionic-angular';
 import { MoviesProvider } from '../../providers/movies-provider';
 import { DetailsPage } from '../details-page/details-page';
+import { FavoriteInputPage } from '../favorite-input-page/favorite-input-page';
+
 
 @Component({
   selector: 'page-search-page',
@@ -26,11 +28,14 @@ export class SearchPage {
     this.navCtrl.push(DetailsPage, { 'imdbID': id});
   }
 
+  private addFavorite(movie: any) {
+    let modal = this.modalController.create(FavoriteInputPage, movie);
+    modal.present();
+  }
+
   constructor(public navCtrl: NavController, 
-    private repository: MoviesProvider) {
-
+    private repository: MoviesProvider,
+    private modalController: ModalController) {
         this.movies = [];
-
-
-    }
+          }
 }

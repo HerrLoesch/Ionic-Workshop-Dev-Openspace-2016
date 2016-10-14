@@ -5,6 +5,8 @@ import { DetailsPage } from '../pages/details-page/details-page';
 import { SearchPage } from '../pages/search-page/search-page';
 import { FavoritesPage } from '../pages/favorites-page/favorites-page';
 import { AboutPage } from '../pages/about-page/about-page';
+import { FavoriteInputPage } from '../pages/favorite-input-page/favorite-input-page';
+
 
 
 @NgModule({
@@ -13,7 +15,8 @@ import { AboutPage } from '../pages/about-page/about-page';
     DetailsPage,
     SearchPage,
     FavoritesPage,
-    AboutPage
+    AboutPage,
+    FavoriteInputPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -24,7 +27,8 @@ import { AboutPage } from '../pages/about-page/about-page';
     DetailsPage,
     SearchPage,
     FavoritesPage,
-    AboutPage
+    AboutPage,
+    FavoriteInputPage
   ],
   providers: []
 })
