@@ -17,7 +17,11 @@
 <h2>{{title}}</h2>
 <p>{{year}}</p>
 
-<ion-textarea placeholder="comments" rows="5"></ion-textarea>
+<form (ngSubmit)="save()" [formGroup]="formData">
+  <ion-textarea placeholder="comments" 
+    formControlName="commentsArea"
+  rows="5"></ion-textarea>
 
-<button ion-button full>Save</button>
+  <button ion-button full type="submit" >Save</button>
+</form>
 </ion-content>
