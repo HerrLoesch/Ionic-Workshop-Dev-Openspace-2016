@@ -3,15 +3,18 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from 'ionic-native';
 
 import { SearchPage } from '../pages/search-page/search-page';
-import { DetailsPage } from '../pages/details-page/details-page';
-
+import { FavoritesPage } from '../pages/favorites-page/favorites-page';
+import { AboutPage } from '../pages/about-page/about-page';
 
 
 @Component({
-  template: `<ion-nav [root]="rootPage"></ion-nav>`
+  templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage = SearchPage;
+
+  searchRoot = SearchPage;
+  favoritesRoot = FavoritesPage;
+  aboutRoot = AboutPage;  
 
   constructor(platform: Platform) {
     platform.ready().then(() => {
