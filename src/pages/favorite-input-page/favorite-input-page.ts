@@ -17,7 +17,7 @@ export class FavoriteInputPage {
   }
 
   save() {
-    console.log(this.formData.value.commentsArea)
+    console.log(this.formData.value.commentsArea);
     
     this.viewController.dismiss(); 
    }
