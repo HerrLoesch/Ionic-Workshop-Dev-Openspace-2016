@@ -11,10 +11,21 @@ export class SearchPage {
 
   public movies: any;
 
+  private searchText: string = '';
+
+  private onSearchInput() {
+    this.repository.getMovies(this.searchText)
+          .then(data => {
+            this.movies = data;
+            console.log(data);            
+          });
+  }
+
   constructor(public navCtrl: NavController, 
     private repository: MoviesProvider) {
 
-        this.movies = this.repository.getMovies("jo");
+        this.movies = [];
+
 
     }
 }
