@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from 'ionic-angular';
 import { MoviesProvider } from '../../providers/movies-provider';
+import { NavParams } from 'ionic-angular';
+
 
 @Component({
   selector: 'page-details-page',
@@ -12,15 +13,17 @@ export class DetailsPage implements OnInit {
   private movie: any = {};
 
   ngOnInit() {
+      let id = this.params.get('imdbID');
 
-        this.repository.getMovie("tt1285016")
+        this.repository.getMovie(id)
           .then(data => {
             this.movie = data;
             console.log(data);            
           });
   }
 
-  constructor(public navCtrl: NavController, private repository:MoviesProvider) {
+  constructor(public params: NavParams, 
+  private repository:MoviesProvider) {
   }
 
   ionViewDidLoad() {

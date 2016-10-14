@@ -11,7 +11,7 @@ import { DetailsPage } from '../pages/details-page/details-page';
   template: `<ion-nav [root]="rootPage"></ion-nav>`
 })
 export class MyApp {
-  rootPage = DetailsPage;
+  rootPage = SearchPage;
 
   constructor(platform: Platform) {
     platform.ready().then(() => {

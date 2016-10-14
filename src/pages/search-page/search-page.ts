@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { MoviesProvider } from '../../providers/movies-provider';
+import { DetailsPage } from '../details-page/details-page';
 
 @Component({
   selector: 'page-search-page',
@@ -19,6 +20,10 @@ export class SearchPage {
             this.movies = data;
             console.log(data);            
           });
+  }
+
+  private showDetails(id: string){
+    this.navCtrl.push(DetailsPage, { 'imdbID': id});
   }
 
   constructor(public navCtrl: NavController, 
